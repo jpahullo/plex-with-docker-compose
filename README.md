@@ -2,6 +2,24 @@
 
 This is the skeleton to run your Plex server into your computer.
 
+## How to start
+
+NOTE: You must have `docker` and `docker-compose` installed. Follow official
+documentation to install them on your computer.
+
+```
+git clone https://github.com/jpahullo/plex-with-docker-compose.git plex
+cd plex/docker
+docker-compose up
+```
+
+If you do not want to see what's happening behind the scenes, just apply
+this last line instead (adding `-d`):
+
+```
+docker-compose up -d
+```
+
 ## Advantages
 
 1. No dependencies on your computer, just docker and docker-compose.
