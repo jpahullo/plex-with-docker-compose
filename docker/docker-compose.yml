@@ -10,11 +10,11 @@ services:
             - PGID="1000"
             - TZ="Europe/London"
         volumes:
-            - ./config:/config
-            - ./tvshows:/data/tvshows
-            - ./movies:/data/movies
-            - ./music:/data/music
-            - ./transcode:/transcode
+            - ./../config:/config
+            - ./../tvshows:/data/tvshows
+            - ./../movies:/data/movies
+            - ./../music:/data/music
+            - ./../transcode:/transcode
         network_mode: "host"
 
         
