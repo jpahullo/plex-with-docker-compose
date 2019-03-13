@@ -6,8 +6,8 @@ services:
         container_name: plex
         environment:
             - VERSION="latest"
-            - PUID="1000"
-            - PGID="1000"
+            - PUID=1000
+            - PGID=1000
             - TZ="Europe/London"
         volumes:
             - ./../config:/config
