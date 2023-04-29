@@ -40,6 +40,9 @@ directory structure more or less:
     └── spanish
 ```
 
+What I do next is to associate these directories as media library into your
+Plex server: [http://localhost:32400/web/index.html](http://localhost:32400/web/index.html).
+
 ## Start your plex easily
 
 You need to have the `bin/` into your PATH. To do so, I recommend this way:
