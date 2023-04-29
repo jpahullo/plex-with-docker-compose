@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 
 services:
     plex:
@@ -11,10 +11,7 @@ services:
             - TZ="Europe/London"
         volumes:
             - ./../config:/config
-            - ./../tvshows:/data/tvshows
-            - ./../movies:/data/movies
-            - ./../music:/data/music
-            - ./../transcode:/transcode
+            - ./../data:/data
         network_mode: "host"
 
         

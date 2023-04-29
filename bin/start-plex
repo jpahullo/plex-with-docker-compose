@@ -1,0 +1,23 @@
+#!/bin/bash
+
+thisdir=$(dirname "$0")
+
+# Always use latest version.
+docker pull linuxserver/plex
+docker-compose -f "${thisdir}/../docker/docker-compose.yml" up -d
+
+# When upgrading Plex version, it may take long time.
+echo "Waiting plex to get started..."
+while true; do 
+  started=$(docker logs --tail 100 plex 2>&1 | grep "Starting Plex Media Server"); 
+  [ -n "$started" ] && break; 
+  echo -n "."; 
+  sleep 5; 
+done
+echo 
+
+# Wait extra time to ensure Plex service is up and running.
+sleep 10
+
+# Open default web browser.
+xdg-open "http://localhost:32400/web/index.html" &> /dev/null &

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+thisdir=$(dirname "$0")
+
+docker-compose -f "${thisdir}/../docker/docker-compose.yml" down
+
